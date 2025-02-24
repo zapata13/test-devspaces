@@ -44,6 +44,11 @@ components:
     volume:
       size: 3Gi
 commands:
+  - id: mvnw-chmod
+    exec:
+      component: tools
+      commandLine: 'chmod +x mvnw'
+      workingDir: ${PROJECT_SOURCE}
   - id: init-compile
     exec:
       component: tools
@@ -67,3 +72,7 @@ commands:
         kind: debug
         isDefault: true
       workingDir: ${PROJECT_SOURCE}
+events:
+  postStart:
+    - mvnw-chmod
+    - init-compile
