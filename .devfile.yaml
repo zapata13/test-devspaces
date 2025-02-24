@@ -72,7 +72,3 @@ commands:
         kind: debug
         isDefault: true
       workingDir: ${PROJECT_SOURCE}
-events:
-  postStart:
-    - mvnw-chmod
-    - init-compile
