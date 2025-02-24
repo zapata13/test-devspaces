@@ -1,4 +1,4 @@
-package org.acme;
+package demo.redhat;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
