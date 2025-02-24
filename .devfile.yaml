@@ -28,6 +28,15 @@ components:
         - exposure: none
           name: debug
           targetPort: 5858
+        - exposure: public
+          name: quarkus-devui
+          path: /q/dev
+          protocol: https
+          targetPort: 8080
+        - exposure: none
+          name: quarkus-debug
+          protocol: tcp
+          targetPort: 5005
       env:
         - name: DEBUG_PORT
           value: '5858'
